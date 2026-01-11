@@ -1,0 +1,10 @@
+ARG ERPNEXT_VERSION=v15.94.1
+FROM frappe/erpnext:${ERPNEXT_VERSION}
+
+USER root
+RUN mkdir -p /home/frappe/frappe-bench/sites/assets
+COPY --chown=frappe:frappe branding/frappe/hooks.py /home/frappe/frappe-bench/apps/frappe/frappe/hooks.py
+COPY --chown=frappe:frappe branding/erpnext/hooks.py /home/frappe/frappe-bench/apps/erpnext/erpnext/hooks.py
+COPY --chown=frappe:frappe branding/assets/gmgi-logo.svg /home/frappe/frappe-bench/sites/assets/gmgi-logo.svg
+COPY --chown=frappe:frappe branding/assets/gmgierp-logo.svg /home/frappe/frappe-bench/sites/assets/gmgierp-logo.svg
+USER frappe
