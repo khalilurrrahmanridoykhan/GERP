@@ -109,8 +109,8 @@ calendars = ["Task", "Work Order", "Sales Order", "Holiday List", "ToDo"]
 website_generators = ["BOM", "Sales Partner"]
 
 website_context = {
-	"favicon": "/assets/gmgierp-logo.svg",
-	"splash_image": "/assets/gmgierp-logo.svg",
+	"favicon": "/assets/gmgierp-g.svg",
+	"splash_image": "/assets/gmgierp-g.svg",
 }
 
 # nosemgrep
