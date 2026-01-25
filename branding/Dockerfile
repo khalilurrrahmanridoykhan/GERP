@@ -1,5 +1,6 @@
 ARG ERPNEXT_VERSION=v15.94.1
-FROM frappe/erpnext:${ERPNEXT_VERSION}
+ARG BASE_IMAGE=frappe/erpnext:${ERPNEXT_VERSION}
+FROM ${BASE_IMAGE}
 
 USER root
 RUN mkdir -p /home/frappe/frappe-bench/sites/assets
